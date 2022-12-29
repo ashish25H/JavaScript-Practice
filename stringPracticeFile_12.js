@@ -46,6 +46,34 @@ let list = `Guests:
 
 
 
+const sortString = (str)=>{
+    return str.split("").sort().join("");
+}
+
+
+//q-6 count occurence of a given character
+const countOcc =(str)=>{
+    // let str2 = sort(str);
+    let str2 = sortString(str);
+    let firstEle = str2[0];
+    let count = 1;
+ console.log(str2);
+    for(let i=1; i<=str2.length; i++){
+        if(firstEle !== str2[i]){
+            console.log(`${firstEle} comes ${count} times`);
+            firstEle = str2[i];
+            count = 1;
+        }else{
+            count++;
+        }
+    }
+
+}
+// countOcc("ashish");
+
+
+
+
 
 
 
