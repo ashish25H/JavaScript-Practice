@@ -93,3 +93,17 @@ const compare = (str1,str2)=>{
 
 
 
+//q-8 reverse string
+const rev = (str)=>{
+    let tempStr = str.split("");
+
+    for(let i=0; i<Math.floor(tempStr.length/2); i++){
+        let temp = tempStr[i];
+        tempStr[i] = tempStr[tempStr.length - (i+1)];
+        tempStr[tempStr.length - (i+1)] = temp;
+    }
+    str = tempStr.join("");
+    console.log(str);
+}
+
+// rev("ashish");
