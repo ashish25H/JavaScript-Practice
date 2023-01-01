@@ -106,4 +106,36 @@ const rev = (str)=>{
     console.log(str);
 }
 
-// rev("ashish");
+// rev("Moradabad");
+
+//q-9 reverse a string word by word
+const revByWord = (str)=>{
+    let temp = str.split(" ");
+
+    for(let i=0; i<Math.floor(temp.length/2); i++){
+        let tempEle = temp[i];
+        temp[i] = temp[temp.length - (i+1)];
+        temp[temp.length - (i+1)] = tempEle;
+    }
+
+    str = temp.join(" ");
+    console.log(str);
+}
+
+// revByWord("Hello I am a JavaScript Developer");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
